@@ -1,0 +1,132 @@
+table energy_finance_analysis
+	lineageTag: 8807b0aa-0fa0-4d24-8565-06913846fd44
+	sourceLineageTag: [dbo].[energy_finance_analysis]
+
+	column REGION
+		dataType: string
+		lineageTag: 2adea6b7-6ea2-4e1d-b03f-45d13b3f3abd
+		sourceLineageTag: REGION
+		summarizeBy: none
+		sourceColumn: REGION
+
+		annotation SummarizationSetBy = Automatic
+
+	column SETTLEMENTDATE
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: d8c37cd8-5718-44b9-adf8-9ab115e7a141
+		sourceLineageTag: SETTLEMENTDATE
+		summarizeBy: none
+		sourceColumn: SETTLEMENTDATE
+
+		annotation SummarizationSetBy = Automatic
+
+	column TOTALDEMAND
+		dataType: double
+		lineageTag: c7c59833-2c9a-42b3-83f3-3f6e9a3f53d5
+		sourceLineageTag: TOTALDEMAND
+		summarizeBy: sum
+		sourceColumn: TOTALDEMAND
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column RRP
+		dataType: double
+		lineageTag: 32f4d4af-4b36-4c8c-a802-28ff16b6aff4
+		sourceLineageTag: RRP
+		summarizeBy: sum
+		sourceColumn: RRP
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column PERIODTYPE
+		dataType: string
+		lineageTag: 6c729487-2f1f-4bee-ac39-a7c35e779fc7
+		sourceLineageTag: PERIODTYPE
+		summarizeBy: none
+		sourceColumn: PERIODTYPE
+
+		annotation SummarizationSetBy = Automatic
+
+	column JoinDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 5d8c2bc1-fd07-466b-9141-cc52f5883eb5
+		sourceLineageTag: JoinDate
+		summarizeBy: none
+		sourceColumn: JoinDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column Date
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 55b616d9-efa6-4cd6-b517-b7ec935e0736
+		sourceLineageTag: Date
+		summarizeBy: none
+		sourceColumn: Date
+
+		annotation SummarizationSetBy = Automatic
+
+	column AUDUSD_X
+		dataType: double
+		lineageTag: 88df6614-b1fb-48a5-a579-7ba6164eaa98
+		sourceLineageTag: AUDUSD_X
+		summarizeBy: sum
+		sourceColumn: AUDUSD_X
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column BHP_AX
+		dataType: double
+		lineageTag: c351eb74-98e3-49bb-a7c3-2b0b27eff078
+		sourceLineageTag: BHP_AX
+		summarizeBy: sum
+		sourceColumn: BHP_AX
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column NG_F
+		dataType: double
+		lineageTag: 89b42c8c-d0e4-4844-b609-8da2fe8db645
+		sourceLineageTag: NG_F
+		summarizeBy: sum
+		sourceColumn: NG_F
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Hour
+		dataType: int64
+		formatString: 0
+		lineageTag: ae37ad51-9fb8-493e-8db3-7c4fbdade875
+		sourceLineageTag: Hour
+		summarizeBy: sum
+		sourceColumn: Hour
+
+		annotation SummarizationSetBy = Automatic
+
+	column FX_Group
+		dataType: string
+		lineageTag: 7fa5e884-3e22-4f6c-a072-31c6c0125d65
+		sourceLineageTag: FX_Group
+		summarizeBy: none
+		sourceColumn: FX_Group
+
+		annotation SummarizationSetBy = Automatic
+
+	partition energy_finance_analysis = entity
+		mode: directLake
+		source
+			entityName: energy_finance_analysis
+			expressionSource: 'DirectLake - lh_australia_energy'
+

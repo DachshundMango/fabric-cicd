@@ -1,0 +1,11 @@
+expression 'DirectLake - lh_australia_energy' =
+		let
+		    Source = AzureStorage.DataLake("https://onelake.dfs.fabric.microsoft.com/d6dd24d2-7c72-461c-a092-ef167ecc8818/c3f4be21-988d-42a0-9b70-8816a5c9aa09", [HierarchicalNavigation=true])
+		in
+		    Source
+	lineageTag: dac79d60-1995-447e-af31-56453bfdea6f
+
+	annotation PBI_IncludeFutureArtifacts = False
+
+	annotation PBI_RemovedChildren = [{"remoteItemId":{"analysisServicesObject":{"sourceName":null,"sourceLineageTag":"[dbo].[yfinance]"}},"objectType":"Table"},{"remoteItemId":{"analysisServicesObject":{"sourceName":null,"sourceLineageTag":"[dbo].[energy_demand]"}},"objectType":"Table"}]
+

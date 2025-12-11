@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Notebook",
+    "displayName": "01_ETL_energy_finance_merge"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "540b97f8-3afb-9879-408f-599b82a6c815"
+  }
+}

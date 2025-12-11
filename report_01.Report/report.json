@@ -1,0 +1,60 @@
+{
+  "config": "{\"version\":\"5.69\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY25SU12\",\"version\":{\"visual\":\"2.5.0\",\"report\":\"3.1.0\",\"page\":\"2.3.0\"},\"type\":2}},\"activeSectionIndex\":0,\"defaultDrillFilterOtherVisuals\":true,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"useEnhancedTooltips\":true,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}]}}",
+  "layoutOptimization": 0,
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "CY25SU12",
+            "path": "BaseThemes/CY25SU12.json",
+            "type": 202
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    }
+  ],
+  "sections": [
+    {
+      "config": "{}",
+      "displayName": "1 페이지",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "b0bf6eb97fc37f4b71ed",
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"0009c19d4aa7de821b78\",\"layouts\":[{\"id\":0,\"position\":{\"x\":483.0689476412649,\"y\":49.10316226023846,\"z\":1,\"width\":412.7319854847071,\"height\":349.69414204250904,\"tabOrder\":1}}],\"singleVisual\":{\"visualType\":\"clusteredColumnChart\",\"projections\":{\"Category\":[{\"queryRef\":\"energy_finance_analysis.Hour\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(energy_finance_analysis.RRP)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"e\",\"Entity\":\"energy_finance_analysis\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"e\"}},\"Property\":\"Hour\"},\"Name\":\"energy_finance_analysis.Hour\",\"NativeReferenceName\":\"Hour\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"e\"}},\"Property\":\"RRP\"}},\"Function\":5},\"Name\":\"Sum(energy_finance_analysis.RRP)\",\"NativeReferenceName\":\"RRP개\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"e\"}},\"Property\":\"RRP\"}},\"Function\":5}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[{\"expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"energy_finance_analysis\"}},\"Property\":\"RRP\"}},\"Function\":5}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"e\",\"Entity\":\"energy_finance_analysis\",\"Type\":0}],\"Where\":[{\"Condition\":{\"Comparison\":{\"ComparisonKind\":3,\"Left\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"e\"}},\"Property\":\"RRP\"}},\"Function\":5}},\"Right\":{\"Literal\":{\"Value\":\"0L\"}}}}}]},\"type\":\"Advanced\",\"howCreated\":0,\"isHiddenInViewMode\":false}]",
+          "height": 349.69,
+          "width": 412.73,
+          "x": 483.07,
+          "y": 49.10,
+          "z": 1.00
+        },
+        {
+          "config": "{\"name\":\"af2a372a17e28be34054\",\"layouts\":[{\"id\":0,\"position\":{\"x\":9.953343701399689,\"y\":0,\"z\":0,\"width\":412.7319854847071,\"height\":349.69414204250904,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"lineChart\",\"projections\":{\"Category\":[{\"queryRef\":\"energy_finance_analysis.Hour\",\"active\":true}],\"Y2\":[{\"queryRef\":\"Sum(energy_finance_analysis.RRP)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"e\",\"Entity\":\"energy_finance_analysis\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"e\"}},\"Property\":\"Hour\"},\"Name\":\"energy_finance_analysis.Hour\",\"NativeReferenceName\":\"Hour\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"e\"}},\"Property\":\"RRP\"}},\"Function\":1},\"Name\":\"Sum(energy_finance_analysis.RRP)\",\"NativeReferenceName\":\"평균 RRP개\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"e\"}},\"Property\":\"RRP\"}},\"Function\":1}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 349.69,
+          "width": 412.73,
+          "x": 9.95,
+          "y": 0.00,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"e50fee57f2829a83b2e2\",\"layouts\":[{\"id\":0,\"position\":{\"x\":918.3618455158113,\"y\":63.03784344219803,\"z\":2,\"width\":345.7128045619492,\"height\":224.28201140487297,\"tabOrder\":2}}],\"singleVisual\":{\"visualType\":\"clusteredColumnChart\",\"projections\":{\"Category\":[{\"queryRef\":\"energy_finance_analysis.FX_Group\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(energy_finance_analysis.RRP)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"e\",\"Entity\":\"energy_finance_analysis\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"e\"}},\"Property\":\"FX_Group\"},\"Name\":\"energy_finance_analysis.FX_Group\",\"NativeReferenceName\":\"FX_Group\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"e\"}},\"Property\":\"RRP\"}},\"Function\":1},\"Name\":\"Sum(energy_finance_analysis.RRP)\",\"NativeReferenceName\":\"평균 RRP개\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"e\"}},\"Property\":\"RRP\"}},\"Function\":1}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 224.28,
+          "width": 345.71,
+          "x": 918.36,
+          "y": 63.04,
+          "z": 2.00
+        }
+      ],
+      "width": 1280.00
+    }
+  ]
+}
