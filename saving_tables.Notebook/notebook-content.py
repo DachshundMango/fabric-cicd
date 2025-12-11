@@ -46,7 +46,7 @@ for table in tables:
 
 # CELL ********************
 
-print("test Github")
+print("Hello! Fabric and Azure!")
 
 # METADATA ********************
 
